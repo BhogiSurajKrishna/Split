@@ -14,3 +14,10 @@ class SignUpForm(UserCreationForm):
 	class Meta:
 		model = User
 		fields = ['username', 'userid','email', 'password1', 'password2']
+
+	def save(self, commit=True):
+		user = super(SignUpForm, self).save(commit=False)
+		user.userid = self.cleaned_data["userid"]
+		if commit:
+			user.save()
+		return user

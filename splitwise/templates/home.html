@@ -5,7 +5,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
+  Hi {{ user.userid }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
   <p><a href="{% url 'password_reset' %}">reset password</a></p>
   <p><a href="{% url 'info' %}">update Personal information</a></p>
