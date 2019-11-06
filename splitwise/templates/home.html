@@ -1,18 +1,52 @@
 <!-- templates/home.html -->
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Home{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<body>
+  <main>
 
-{% block title %}Home{% endblock %}
 
-{% block content %}
-{% if user.is_authenticated %}
-  Hi {{ user.userid }}!
-  <p><a href="{% url 'logout' %}">logout</a></p>
-  <p><a href="{% url 'password_reset' %}">reset password</a></p>
-  <p><a href="{% url 'info' %}">update Personal information</a></p>
-  <img src="/media/{{ user.profile.image }}" width="240" enctype="multipart/form-data">
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
-  <a href="{% url 'signup' %}">signup</a>
-{% endif %}
-{% endblock %}
+    {% block content %}
+    {% if user.is_authenticated %}
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">SplitWise</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Friends</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Groups<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Activity</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'info' %}"><span class="glyphicon glyphicon-user"></span>{{ user.username }}</a></li>
+          <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+      Hi {{ user.username }}!
+      <!-- <p><a href="{% url 'logout' %}">logout</a></p> -->
+      <!-- <p><a href="{% url 'password_reset' %}">reset password</a></p> -->
+      <!-- <p><a href="{% url 'info' %}">update Personal information</a></p> -->
+      <img src="/media/{{ user.profile.image }}" width="auto" enctype="multipart/form-data">
+    {% else %}
+      <p>You are not logged in</p>
+      <a href="{% url 'login' %}">login</a>
+      <a href="{% url 'signup' %}">signup</a>
+    {% endif %}
+    {% endblock %}
+  </main>
+</body>
+</html>
