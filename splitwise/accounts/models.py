@@ -6,7 +6,7 @@ from django.db.models.signals import post_save
 class profile(models.Model):
 	# name = models.CharField(max_length = 100)
 	# password = models.CharField(max_length = 150)
-	user = models.OneToOneField(User)
+	user = models.OneToOneField(User,on_delete=models.PROTECT)
 	firstname = models.CharField(max_length = 100,blank=True,)
 	secondname = models.CharField(max_length = 100,blank=True)
 	email =models.EmailField(default="",blank=True)
