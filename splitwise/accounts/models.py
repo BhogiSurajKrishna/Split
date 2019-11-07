@@ -22,3 +22,25 @@ def create_profile(sender, **kwargs):
 		user_profile = profile.objects.create(user=kwargs['instance'])
 
 post_save.connect(create_profile, sender=User)
+
+class Friend(models.Model):
+	users = models.ManyToManyField(User)
+	current_user = models.ForeignKey(User, related_name='owner',null=True,on_delete=models.CASCADE)
+	@classmethod
+	def make_friend(cls,current_user,new_friend):
+		friend, created = cls.objects.get_or_create(
+			current_user=current_user
+		)
+		friend.users.add(new_friend)
+		friend, created = cls.objects.get_or_create(
+			current_user=new_friend
+		)
+		friend.users.add(current_user)
+
+
+def create_friend(sender,**kwargs):
+	if kwargs['created']:
+		user_friends = Friend(User)
+		user_friends.user = kwargs['instance']
+
+post_save.connect(create_friend, sender=User)

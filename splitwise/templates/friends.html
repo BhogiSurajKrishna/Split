@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Friends{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="col-md-8">
+      <h2>Friends</h2>
+      <!-- <h3>{{ user }}</h3>
+      <h3>{{ user.profile.firstname}}</h3> -->
+      {% for friend in friends %}
+        <a href="#">
+          <h3>{{ friend.username }}
+            {{ friend.pk }}
+        </h3>
+        </a>
+      {% endfor %}
+
+
+  </div>
+  <div class="col-md-4">
+    <h2>Other Users</h2>
+    {% for user in users %}
+      <a href="#">
+          {% if not user in friends %}
+          <h3>{{ user.username }}
+            {{ user.pk }}
+            <a href="{% url 'add_friends' pk=user.pk %}">
+            <button type="button" name="btn btn-default">ADD</button>
+            </a>
+          {% endif %}
+
+        </h3>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
