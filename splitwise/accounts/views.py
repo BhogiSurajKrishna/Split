@@ -5,23 +5,15 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
-from accounts.forms import profileform,SignUpForm
-from django.contrib.auth.models import User
+from accounts.forms import profileform,SignUpForm,groupform
+from django.contrib.auth.models import User,Group,Permission
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
 
 from accounts.models import Friend
-# def SignUp(request):
-#     form_class = UserCreationForm
-#     success_url = reverse_lazy('login')
-#     template_name = 'signup.html'
-# Create your views here.
 
 def profile(request):
-	# try:
-	# 	profile_instance = profile.objects.get(user=request.User)
-	# except:
-	# 	profile_instance = profile(user=request.User)
+
 	if request.method == 'POST':
 
 		form = profileform(request.POST)
@@ -33,7 +25,6 @@ def profile(request):
 		form = profileform()
 		args = {'form' : form}
 		return render(request, 'profile.html', args)
-		# return HttpResponse("<h1>enduku puttav ra"+s+"</h1>")
 
 def SignUp(request):
 	if request.method == 'POST':
@@ -79,7 +70,7 @@ def friends(request):
 		args = {'user': request.user,'users': users,'friends':friends}
 		return render(request,'friends.html',args)
 	except Exception:
-		"I have no friends :("
+		"You have no friends :("
 
 def add_friends(request,pk):
 	users = User.objects.exclude(id=request.user.id)
@@ -93,6 +84,35 @@ def add_friends(request,pk):
 def create_group(request):
 	friend = Friend.objects.get(current_user=request.user)
 	friends = friend.users.all()
-
-	args = {'user':request.user,'friends':friends}
+	groups = request.user.groups.all()
+	args = {'user':request.user,'friends':friends,'groups':groups}
 	return render(request,'groups.html',args)
+
+def add_group(request):
+
+	if request.method == 'POST':
+
+		form = groupform(request.POST)
+		if form.is_valid():
+			form.save()
+			GroupName = form.cleaned_data.get('GroupName')
+			g1,created = Group.objects.get_or_create(name=GroupName)
+			perm = Permission.objects.all()
+			g1.permissions.set(perm)
+			request.user.groups.add(g1)
+			return redirect('/accounts/groups')
+
+	else:
+		form = groupform()
+		args = {'form' : form}
+		return render(request, 'group_form.html', args)
+
+def add_friends_to_group(request,pk):
+	#users = User.objects.exclude(id=request.user.id)
+	friend = Friend.objects.get(current_user=request.user)
+	friends = friend.users.all()
+	new_friend = User.groups.filter(id=pk)
+	groups = request.user.groups.all()
+	args = {'user': request.user,'friends':friends,'new_friend':new_friend,'groups':groups}
+	#Friend.make_friend(request.user,new_friend)
+	return render(request,'in_group.html',args)

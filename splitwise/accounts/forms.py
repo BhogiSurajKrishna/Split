@@ -1,5 +1,5 @@
 from django import forms
-from accounts.models import profile
+from accounts.models import profile,add_group
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm,forms
 
@@ -14,3 +14,8 @@ class SignUpForm(UserCreationForm):
 	class Meta:
 		model = User
 		fields = ['username', 'userid','email', 'password1', 'password2']
+
+class groupform(forms.ModelForm):
+	class Meta:
+		model = add_group
+		fields = ['GroupName','Description']

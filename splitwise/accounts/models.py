@@ -44,3 +44,20 @@ def create_friend(sender,**kwargs):
 		user_friends.user = kwargs['instance']
 
 post_save.connect(create_friend, sender=User)
+
+class add_group(models.Model):
+	# name = models.CharField(max_length = 100)
+	# password = models.CharField(max_length = 150)
+	#user = models.ManyToManyField(User)
+	#current_user = models.ForeignKey(User, related_name='owner',null=True,on_delete=models.CASCADE)
+	#id = models.IntegerField(primary_key=True)
+	GroupName = models.CharField(max_length = 100,blank=True,)
+	Description = models.CharField(max_length = 100,blank=True)
+	#group = models.ManyToManyField(GroupName)
+
+	def __str__(self):
+		return self.GroupName
+
+class group_member(models.Model):
+	user = User
+	groups = models.ManyToManyField(add_group)

@@ -5,15 +5,7 @@
 {% block content %}
 <div class="container">
   <div class="col-md-8">
-      <h2>Groups</h2>
-      <a href="{% url 'add_group' %}">
-        <button type="button" name="btn btn-default">Create Group</button>
-      </a>
-      {% for group in groups %}
-      <a href="{% url 'add_friends_to_group' pk=group.pk %}">
-      <h3>{{ group.name }}</h3>
-      </a>
-      {% endfor %}
+      <h2>{{ new_friend.name }}</h2>
   </div>
   <div class="col-md-4">
     <h2>Your Friends</h2>
