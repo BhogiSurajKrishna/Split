@@ -10,4 +10,6 @@ urlpatterns = [
     url(r'^groups/$',views.create_group,name='create_group'),
     url(r'^add_group/$',views.add_group,name='add_group'),
     url(r'^groups/(?P<pk>\d+)/$',views.add_friends_to_group,name='add_friends_to_group')
+    url(r'^groups/(?P<pk>\d+)/(?P<pk>\d+)/$',views.add_friends_to_group_new,name='add_friends_to_group_new')
+
 ]

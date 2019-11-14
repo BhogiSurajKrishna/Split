@@ -59,5 +59,4 @@ class add_group(models.Model):
 		return self.GroupName
 
 class group_member(models.Model):
-	user = User
-	groups = models.ManyToManyField(add_group)
+	group_members = models.ManyToManyField(add_group)
