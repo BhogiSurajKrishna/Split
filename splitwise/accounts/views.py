@@ -120,6 +120,17 @@ def add_friends_to_group(request,pk):
 	#Friend.make_friend(request.user,new_friend)
 	return render(request,'in_group.html',args)
 
+# def add_friends_to_group_new(request,pk):
+# 	friend = Friend.objects.get(current_user=request.user)
+# 	friends = friend.users.all()
+# 	#new_friend = User.objects.get(pk=pk2)
+# 	group = request.user.groups.get(pk=pk)
+# 	group.user_set.add(new_friend)
+# 	group.save()
+# 	#groups = new_friend.user_set.all()
+# 	args = {'user': request.user,'friends':friends,'groups':groups}
+# 	return render(request,'in_group.html',args)
+
 def add_friends_to_group_new(request,pk1,pk2):
 	friend = Friend.objects.get(current_user=request.user)
 	friends = friend.users.all()
@@ -127,6 +138,6 @@ def add_friends_to_group_new(request,pk1,pk2):
 	group = request.user.groups.get(pk=pk1)
 	group.user_set.add(new_friend)
 	group.save()
-	groups = new_friend.user_set.all()
+	groups = group.user_set.all()
 	args = {'user': request.user,'friends':friends,'new_friend':new_friend,'groups':groups}
 	return render(request,'in_group.html',args)

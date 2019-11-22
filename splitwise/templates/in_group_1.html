@@ -20,7 +20,7 @@
         {% if not friend in groups %}
         <h3>{{ friend.username }}
           {{ friend.pk }}
-      <a href="{% url 'add_friends_to_group_new' pk1=new_friend.pk pk2=friend.pk %}">
+      <a href="{% url 'add_friends_to_group_new_1' pk1=groups.pk pk2=friend.pk %}">
       <button type="button" name="btn btn-default">ADD</button>
       </a>
       </h3>
