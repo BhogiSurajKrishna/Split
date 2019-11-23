@@ -3,27 +3,44 @@
 {% block title %}Friends{% endblock %}
 
 {% block content %}
+
+<center>
+<h1 style="color:green">You are owed Rs.{{ neg }} :) </h1>
+<h1 style="color:red">You owe Rs.{{ pos }} :( </h1>
+</center>
+
 <div class="container">
-  <div class="col-md-8">
+  <div class="col-md-4">
       <h2>Friends</h2>
-      {% for friend in friends %}
-        <a href="#">
-          <h3>{{ friend.username }}
-        </h3>
-        </a>
+      {% for friend1 in friends %}
+      <a href="{% url 'friend_detail' pk=friend1.pk %}">
+      <h3>{{ friend1.username }}
+    </h3>
+    </a>
       {% endfor %}
 
+</div>
 
+<div class="col-md-4">
+   <h2>Balance Amount</h2>
+   {% for x in exp %}
+
+   <h3>{{ x }}
+ </h3>
+   {% endfor %}
   </div>
+
   <div class="col-md-4">
     <h2>Other Users</h2>
     {% for user in users %}
       <a href="#">
           {% if not user in friends %}
-          <h3>
+          <h3>{{ user.username }}
+            <div class="col-md-2">
             <a href="{% url 'add_friends' pk=user.pk %}">
-            <button type="button" name="btn btn-default" onclick="http://127.0.0.1:8000/accounts/friends/">+</button>
-            </a>{{ user.username }}
+            <button type="button" name="btn btn-submit">+</button>
+            </a>
+            </div>
           {% endif %}
 
         </h3>
@@ -31,5 +48,4 @@
     {% endfor %}
   </div>
 </div>
-
 {% endblock %}
