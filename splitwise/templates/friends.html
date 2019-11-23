@@ -9,7 +9,6 @@
       {% for friend in friends %}
         <a href="#">
           <h3>{{ friend.username }}
-            {{ friend.pk }}
         </h3>
         </a>
       {% endfor %}
@@ -21,11 +20,10 @@
     {% for user in users %}
       <a href="#">
           {% if not user in friends %}
-          <h3>{{ user.username }}
-            {{ user.pk }}
+          <h3>
             <a href="{% url 'add_friends' pk=user.pk %}">
-            <button type="button" name="btn btn-default">ADD</button>
-            </a>
+            <button type="button" name="btn btn-default" onclick="http://127.0.0.1:8000/accounts/friends/">+</button>
+            </a>{{ user.username }}
           {% endif %}
 
         </h3>

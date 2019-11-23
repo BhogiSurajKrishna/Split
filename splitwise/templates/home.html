@@ -11,16 +11,15 @@
 <body>
   <main>
 
-
     {% block content %}
     {% if user.is_authenticated %}
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" style="color:#399C53;">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">SplitWise</a>
+          <a class="navbar-brand" href="{% url 'home' %}">SplitWise</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{% url 'friends' %}">Friends</a></li>
+          <li><a href="{% url 'friends' %}">Friends</a></li>
           <li><a href="{% url 'create_group' %}">Groups</a></li>
           <li><a href="#">Activity</a></li>
         </ul>
@@ -30,15 +29,40 @@
         </ul>
       </div>
     </nav>
-      Hi {{ user.username }}!
+    <div class="container">
+      <br><br><br>
+      <div class="col-md-6">
+      {% if user.profile.image == "" %}
+      <img src="/media/images/profile.png" width="300" enctype="multipart/form-data" class="rounded-circle">
+      {% else %}
+      <img src="/media/{{ user.profile.image }}" width="300" height="300" enctype="multipart/form-data" class="rounded-circle">
+      {% endif %}
+      <br><br><br>
+      <h2 style="color:#900C3F;"> Username: {{ user.username }}</h2>
+      <h2 style="color:#900C3F;"> Email: {{ user.email }}</h2>
+      <!-- <h2> Userid: {{ user.userid }}</h2> -->
+    </div>
+    <div class="col-md-6">
+      <br><br><br><br>
+      <h1 style="color:#573805;">Hello {{ user.username }}!</h1>
+    </div>
+    </div>
       <!-- <p><a href="{% url 'logout' %}">logout</a></p> -->
       <!-- <p><a href="{% url 'password_reset' %}">reset password</a></p> -->
       <!-- <p><a href="{% url 'info' %}">update Personal information</a></p> -->
+
+      <!-- {% if user.profile.image == "" %}
+      <img src="/media/images/profile.png" width="240" enctype="multipart/form-data">
+      {% else %}
       <img src="/media/{{ user.profile.image }}" width="240" enctype="multipart/form-data">
+      {% endif %} -->
     {% else %}
-      <p>You are not logged in</p>
-      <a href="{% url 'login' %}">login</a>
-      <a href="{% url 'signup' %}">signup</a>
+    <div class="container">
+      <br><br><br><br><br><br>
+      <h1 class="text-left">You are not Logged in</h1>
+      <h2 class="text-left">Please <a href="{% url 'login' %}">Login</a></h2>
+      <h2 class="text-left">If you haven't registered the please <a href="{% url 'signup' %}">Signup</a></h2>
+    </div>
     {% endif %}
     {% endblock %}
   </main>

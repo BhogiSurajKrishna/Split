@@ -11,6 +11,8 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
 
 from accounts.models import Friend
+from django.http import HttpResponse
+from django.contrib.auth.models import User
 
 def profile(request):
 
@@ -42,6 +44,9 @@ def SignUp(request):
 	else:
 		form = SignUpForm()
 		return render(request, 'signup.html', {'form': form})
+
+def home(request):
+	return render(request,'home.html')
 
 def edit_profile(request):
 	try:
@@ -110,26 +115,12 @@ def add_group(request):
 		return render(request, 'group_form.html', args)
 
 def add_friends_to_group(request,pk):
-	#users = User.objects.exclude(id=request.user.id)
 	friend = Friend.objects.get(current_user=request.user)
 	friends = friend.users.all()
 	new_friend = request.user.groups.get(pk=pk)
 	groups = new_friend.user_set.all()
-	#groups = request.user.groups.all()
 	args = {'user': request.user,'friends':friends,'new_friend':new_friend,'groups':groups}
-	#Friend.make_friend(request.user,new_friend)
 	return render(request,'in_group.html',args)
-
-# def add_friends_to_group_new(request,pk):
-# 	friend = Friend.objects.get(current_user=request.user)
-# 	friends = friend.users.all()
-# 	#new_friend = User.objects.get(pk=pk2)
-# 	group = request.user.groups.get(pk=pk)
-# 	group.user_set.add(new_friend)
-# 	group.save()
-# 	#groups = new_friend.user_set.all()
-# 	args = {'user': request.user,'friends':friends,'groups':groups}
-# 	return render(request,'in_group.html',args)
 
 def add_friends_to_group_new(request,pk1,pk2):
 	friend = Friend.objects.get(current_user=request.user)
@@ -141,3 +132,18 @@ def add_friends_to_group_new(request,pk1,pk2):
 	groups = group.user_set.all()
 	args = {'user': request.user,'friends':friends,'new_friend':new_friend,'groups':groups}
 	return render(request,'in_group.html',args)
+
+
+# def export_users_csv(request):
+#     response = HttpResponse(content_type='text/csv')
+#     response['Content-Disposition'] = 'attachment; filename="users.csv"'
+
+#     writer = csv.writer(response)
+#     writer.writerow(['Username', 'First name', 'Last name', 'Email address'])
+
+#     users = User.objects.all().values_list('username', 'first_name', 'last_name', 'last_login')
+#     for user in users:
+#         writer.writerow(user)
+
+#     return response
+

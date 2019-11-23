@@ -12,7 +12,8 @@ class profile(models.Model):
 	email =models.EmailField(default="",blank=True)
 	number = models.IntegerField(default=0,blank=True)
 	city = models.CharField(max_length = 100,blank=True)
-	image = models.ImageField(upload_to='images/',blank=True)
+	# image = models.ImageField(default='1.jpg',upload_to='images/',blank=True)
+	image = models.ImageField(upload_to = 'images/',blank=True, default= 'images/1.jpg', null=True)
 
 	def __str__(self):
 		return self.user.username
@@ -58,5 +59,10 @@ class add_group(models.Model):
 	def __str__(self):
 		return self.GroupName
 
+class Transactions(object):
+	"""docstring for Transactions"""
+	current_user = models.ForeignKey(User, related_name='transaction',null=True,on_delete=models.CASCADE)
+
+		
 class group_member(models.Model):
 	group_members = models.ManyToManyField(add_group)
