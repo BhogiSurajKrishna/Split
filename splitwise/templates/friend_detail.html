@@ -55,7 +55,7 @@
   </div>
   </div>
 {% for tran in trans %}
-{% if tran.current_user == new_friend %}
+{% if tran.current_user == new_friend and tran.current_user_pk == current_user_pk %}
 <div class="container">
   <div>
     <center>
@@ -82,11 +82,12 @@
               <hr class="mt-0 mb-2">
             {% else %}
                 <h3 style="color: grey">Settled up</h3>
+                <hr class="mt-0 mb-1">
             {% endif %}
             </div>
           <div class="col-md-1">
             <center>
-          <a href="#"><h3>Edit</h3></a>              
+          <a href="{% url 'edit_trans' pk=tran.pk pk1=new_friend.pk %}"><h3>Edit</h3></a>              
             </center>
           <hr class="mt-0 mb-1">
           </div>  

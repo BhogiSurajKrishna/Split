@@ -21,7 +21,7 @@
         <ul class="nav navbar-nav">
           <li><a href="{% url 'friends' %}">Friends</a></li>
           <li><a href="{% url 'create_group' %}">Groups</a></li>
-          <li><a href="#">Activity</a></li>
+          <li><a href="{% url 'Activity' %}">Activity</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="{% url 'info' %}"><span class="glyphicon glyphicon-user"></span>{{ user.username }}</a></li>

@@ -22,5 +22,9 @@ class groupform(forms.ModelForm):
 class transform(forms.ModelForm):
 	class Meta:
 		model = Transactions
-		fields = ['amount','type','desc','tag']
+		fields = ['amount','type','desc','tag','split','amount_you','amount_friend']
+class editform(forms.ModelForm):
+	class Meta:
+		model = Transactions
+		fields = ['desc','tag']
 

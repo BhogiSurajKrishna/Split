@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     url(r'^home/$',views.home,name='home'),
     url(r'^signup/$', views.SignUp, name='signup'),
+    url(r'^activity/$', views.activity, name='Activity'),
     url(r'^profile/$' , views.profile, name='profile'),
     url(r'^info/$' , views.edit_profile, name='info'),
     url(r'^friends/$', views.friends, name='friends'),
@@ -16,5 +17,8 @@ urlpatterns = [
     url(r'^groups/(?P<pk>\d+)/$',views.add_friends_to_group,name='add_friends_to_group'),
     # url(r'^groups/(?P<pk>\d+)/$',views.add_friends_to_group_new,name='add_friends_to_group_new'),
     url(r'^groups/(?P<pk1>\d+)/(?P<pk2>\d+)/$',views.add_friends_to_group_new,name='add_friends_to_group_new'),
-
+    url(r'^edit_trans/(?P<pk>\d+)/(?P<pk1>\d+)/$',views.edit_trans,name='edit_trans'),
+    url(r'^SettleUp/$', views.settleup, name='Settleup'),
+    url(r'^balances/(?P<pk>\d+)/$' , views.show_balances, name='show_balances'),
+       
 ]

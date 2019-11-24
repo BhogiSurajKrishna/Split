@@ -3,30 +3,78 @@
 {% block title %}Groups{% endblock %}
 
 {% block content %}
-<div class="container">
-  <div class="col-md-8">
-      <h2>{{ new_friend.name }}</h2>
+<style type="text/css">
+  .divide{
+    float: left;
+    text-align: center;
+  width: 12.5%;
+  height: 100%;
+  }
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+<h3><a href="{% url 'Settleup'%}">Settleup</a>
+<a href="{% url 'show_balances' pk=new_friend.pk%}">Balance</a>
+<a href=# >Add Transactions</a></h3>
+<h2>{{ new_friend.name }} 
+</h2>
+<div class="row">
+  <div class="divide" style="padding-left: 20px;">
       <!-- <h3>{{ groups.u }}</h3> -->
       {% for group in groups %}
-      <a href="#">
+      {% if group.username == user.username %}
+      <a href="{% url 'friends' %}">
+      <h3>You
+        <a href=#>
+      <button type="button" name="btn btn-default">Exit</button>
+      </a></h3>
+      </a>
+      {% else %}
+      <a href="{% url 'friend_detail' pk=group.pk %}">
       <h3>{{ group.username }}</h3>
       </a>
+      {% endif %}
       {% endfor %}
   </div>
-  <div class="col-md-4">
+  <div class="divide">
+    <h3>Transaction Amount</h3>
+    </div>
+    <div class="divide">
+      <h3>ulfa </h3>
+      </div>
+      <div class="divide">
+        <h3>ulfa </h3>
+        </div>
+        <div class="divide">
+          <h3>ulfa </h3>
+          </div>
+          <div class="divide">
+                <h3 style="color: grey">Settled up</h3>
+            </div>
+          <div class="divide">
+            <center>
+          <h3>Edit</h3>            
+            </center>
+          </div>
+  <div class="divide" style="object-position: right;">
+    <center>
     <h2>Your Friends</h2>
     {% for friend in friends %}
       <a href="#">
         {% if not friend in groups %}
         <h3>{{ friend.username }}
-          {{ friend.pk }}
       <a href="{% url 'add_friends_to_group_new' pk1=new_friend.pk pk2=friend.pk %}">
-      <button type="button" name="btn btn-default">ADD</button>
+      <button type="button" name="btn btn-default">+</button>
       </a>
       </h3>
       {% endif %}
       </a>
     {% endfor %}
+    </center>
   </div>
 </div>
 

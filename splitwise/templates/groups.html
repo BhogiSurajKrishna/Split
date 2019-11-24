@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container">
-  <div class="col-md-8">
+  <div class="col-md-4">
       <h2>Groups</h2>
       <a href="{% url 'add_group' %}">
         <button type="button" name="btn btn-default">Create Group</button>
@@ -16,11 +16,16 @@
       {% endfor %}
   </div>
   <div class="col-md-4">
+    <h2>Balances</h2> <br>
+    {% for d in group_details %}
+      <h3 style="color: grey;">{{ d }}</h3>
+      {% endfor %}
+  </div>
+  <div class="col-md-4">
     <h2>Your Friends</h2>
     {% for friend in friends %}
       <a href="#">
         <h3>{{ friend.username }}
-          {{ friend.pk }}
       </h3>
       </a>
     {% endfor %}
