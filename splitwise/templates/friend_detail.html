@@ -3,9 +3,11 @@
 {% block title %}Transactions{% endblock %}
 
 {% block content %}
+<div class="container">
 <a href="{% url 'new_trans' pk=new_friend.pk %}" >
 <button type="button" class="btn btn-default" align="right" style="text-color:blue">Add Transactions</button>
 </a>
+</div>
 <center>
 <h1>Transactions with {{ new_friend.username }}</h1>
 </center>
@@ -17,7 +19,7 @@
     </center>
      <hr class="mt-0 mb-2">
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
       <center>
       <h3>Description</h3>
     </center>
@@ -44,6 +46,13 @@
              <br>
               <hr class="mt-0 mb-2">
   </div>
+  <div class="col-md-2">
+            <center>
+             <h3>Group</h3>              
+            </center>
+             <br>
+              <hr class="mt-0 mb-2">
+  </div>
   <div class="col-md-1">
     <center>
     <h3>Edit</h3>
@@ -63,7 +72,7 @@
     <h3>{{ tran.amount }} </h3>
      <hr class="mt-0 mb-2">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <h3>{{ tran.desc }} </h3>
        <hr class="mt-0 mb-2">
       </div>
@@ -82,9 +91,15 @@
               <hr class="mt-0 mb-2">
             {% else %}
                 <h3 style="color: grey">Settled up</h3>
-                <hr class="mt-0 mb-1">
             {% endif %}
             </div>
+            <div class="col-md-2">
+            <center>
+             <h3>{{ tran.group }}</h3>              
+            </center>
+             <br>
+              <hr class="mt-0 mb-2">
+  </div>
           <div class="col-md-1">
             <center>
           <a href="{% url 'edit_trans' pk=tran.pk pk1=new_friend.pk %}"><h3>Edit</h3></a>              

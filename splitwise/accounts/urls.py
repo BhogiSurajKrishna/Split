@@ -18,7 +18,10 @@ urlpatterns = [
     # url(r'^groups/(?P<pk>\d+)/$',views.add_friends_to_group_new,name='add_friends_to_group_new'),
     url(r'^groups/(?P<pk1>\d+)/(?P<pk2>\d+)/$',views.add_friends_to_group_new,name='add_friends_to_group_new'),
     url(r'^edit_trans/(?P<pk>\d+)/(?P<pk1>\d+)/$',views.edit_trans,name='edit_trans'),
-    url(r'^SettleUp/$', views.settleup, name='Settleup'),
+    url(r'^edit_group_trans/(?P<pk>\d+)/$',views.edit_group_trans,name='edit_group_trans'),
+    url(r'^SettleUp/(?P<pk>\d+)/$', views.settleup, name='Settleup'),
     url(r'^balances/(?P<pk>\d+)/$' , views.show_balances, name='show_balances'),
+    url(r'^group_trans/(?P<pk>\d+)/$' , views.group_trans, name='group_trans'),
+    url(r'^exit/(?P<pk>\d+)/$' , views.exit, name='exit'),
        
 ]

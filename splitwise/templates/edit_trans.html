@@ -13,23 +13,37 @@
     <button value="upload" type="Submit">Submit</button> -->
 <br><br><br>
          <div >
+          <h3>
             <center>
-               <input type = "textarea" style=" width:30%;"
+               <input type = "textarea" style=" width:50%;"
                   placeholder = "Description" name = "desc" required />
             </center>
+          </h3>
          </div>
          <br>
          <div >
-            <center>
-               <input type = "textarea" style=" width:30%;"
-                  placeholder = "Tag" name = "tag" required />
-            </center>
+          <center>
+            <h3>
+               
+                <input list="tags" style=" width:50%;"
+                  placeholder = "Tag" name = "tag" required>
+                  <datalist id="tags">
+                    <option value="Food">
+                    <option value="Travel">
+                    <option value="Party">
+                    <option value="Canteen">
+                    <option value="Debt">
+                    <option value="Medical Expences">
+                    <option value="Gift">
+                  </datalist>
+          </h3>
+        </center>
          </div>
          <br>
          <div >
             <center>
                <button style = "border:0px; background-color:#4285F4;
-                  height:35px; width:30%;" type = "submit"
+                  height:35px; width:50%;" type = "submit"
                   value = "Login" >
                   <strong>Submit</strong>
                </button>

@@ -18,29 +18,235 @@
 15,ramanathi added Chicken. You borrowed 500.0
 1,You added Chicken .You borrowed 150.0
 27,ramanathi added Chicken. You lent 150.0
-1,You added Food .You borrowed 150
-27,ramanathi added Food. You lent 150
-1,You added Chicken .You borrowed 180
-14,ramanathi added Chicken. You lent 180
-1,You added Chicken .You borrowed 800
-14,ramanathi added Chicken. You lent 800
-1,You added Mutton .You borrowed 300
-14,ramanathi added Mutton. You lent 300
-25,You added Donkey Head .You lent 50
-14,test1 added Donkey Head. You borrowed 50
-25,You Settled Donkey Head by receiving 50 .Rs from bargav07
-14,test1 Settled Donkey Head by receiving 50 .Rs from You
-25,You added Chicken .You borrowed 50
-14,test1 added Chicken. You lent 50
-25,You added Chicken Donkey Head Eat Donkey Tails Go to Hell .You lent 50.0
-14,test1 added Chicken Donkey Head Eat Donkey Tails Go to Hell. You borrowed 50.0
-14,You added Food .You lent 300
-14,bargav07 added Food. You borrowed 300
-14,You added Maggi .You borrowed 15
-28,bargav07 added Maggi. You lent 15
-14,You added Chicken .You lent 15
-25,bargav07 added Chicken. You borrowed 15
-1,You added Donkey Head .You lent 500.0
-14,ramanathi added Donkey Head. You borrowed 500.0
-1,You added test1 into Ulfa
-25,ramanathi added you into Ulfa
+1,You created dafaq
+1,You added bargav07intodafaq
+14,You added test1intodafaq
+25,bargav07 added you into dafaq
+25,You added test2 to your's friend's list 
+26,test1 added You to his friend's list 
+25,You added test2into dafaq
+26,test1 added you into dafaq
+25,You added test3 into dafaq
+27,test1 added you into dafaq
+1,You added telu into niadeqgjiow
+23,ramanathi added you into niadeqgjiow
+1,You added test into niadeqgjiow
+24,ramanathi added you into niadeqgjiow
+1,You created cse
+1,You added bargav07 into cse
+14,ramanathi added you into cse
+1,You added bhogi into cse
+15,ramanathi added you into cse
+14,You added ramanathi into MyGroup
+1,bargav07 added you into MyGroup
+1,You created rambo
+1,You created The_Trident
+1,You created The_Trident
+1,You created The_Trident
+1,You created The_Trident
+1,You added test1 into The_Trident
+25,ramanathi added you into The_Trident
+1,You created baahubali
+1,You created baahubali
+1,You created baahubali
+1,You created The_Trident
+1,You added bargav07 into The_Trident
+14,ramanathi added you into The_Trident
+1,You added test1 into The_Trident
+25,ramanathi added you into The_Trident
+1,You created baahubali
+1,You added bargav07 into baahubali
+14,ramanathi added you into baahubali
+14,You added test1 into baahubali
+25,bargav07 added you into baahubali
+14,You created baahubali
+14,You added ramanathi into baahubali
+1,bargav07 added you into baahubali
+14,You added test1 into baahubali
+25,bargav07 added you into baahubali
+1,Group: baahubali ; ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+14,Group: baahubali ; ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+25,Group: baahubali ; ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+14,You added test5 into baahubali
+1,bargav07added test5 into baahubali
+25,bargav07added test5 into baahubali
+28,bargav07added test5 into baahubali
+30,bargav07added test5 into baahubali
+29,bargav07added you  into baahubali
+14,You created The_Trident
+ 
+14,You have changed detail of a transaction of baahubali of description  to  and tag  to 
+1,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+25,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+28,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+30,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+29,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+14,You have changed detail of a transaction of baahubali of description  to  and tag  to 
+1,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+25,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+28,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+30,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+29,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+14,You created Ulfa Batch
+14,You have changed detail of a transaction of baahubali of description  to  and tag  to 
+1,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+25,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+28,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+30,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+29,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+14,You have changed detail of a transaction of baahubali of description Jaffa to  and tag Travel to 
+1,bargav07 has changed a transaction detail in a baahubali with description Jaffa to  and tag Travel to 
+25,bargav07 has changed a transaction detail in a baahubali with description Jaffa to  and tag Travel to 
+28,bargav07 has changed a transaction detail in a baahubali with description Jaffa to  and tag Travel to 
+30,bargav07 has changed a transaction detail in a baahubali with description Jaffa to  and tag Travel to 
+29,bargav07 has changed a transaction detail in a baahubali with description Jaffa to  and tag Travel to 
+14,You have changed detail of a transaction of baahubali of description Splitwise to  and tag Travel to 
+1,bargav07 has changed a transaction detail in a baahubali with description Splitwise to  and tag Travel to 
+25,bargav07 has changed a transaction detail in a baahubali with description Splitwise to  and tag Travel to 
+28,bargav07 has changed a transaction detail in a baahubali with description Splitwise to  and tag Travel to 
+30,bargav07 has changed a transaction detail in a baahubali with description Splitwise to  and tag Travel to 
+29,bargav07 has changed a transaction detail in a baahubali with description Splitwise to  and tag Travel to 
+14,You have changed detail of a transaction of baahubali of description  to  and tag  to 
+1,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+25,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+28,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+30,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+29,bargav07 has changed a transaction detail in a baahubali with description  to  and tag  to 
+14,You have changed detail of a transaction of baahubali of description  to Splitwise and tag  to Food
+1,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Food
+25,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Food
+28,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Food
+30,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Food
+29,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Food
+14,You have changed detail of a transaction of baahubali of description Splitwise to Splitwise and tag Travel to Food
+1,bargav07 has changed a transaction detail in a baahubali with description Splitwise to Splitwise and tag Travel to Food
+25,bargav07 has changed a transaction detail in a baahubali with description Splitwise to Splitwise and tag Travel to Food
+28,bargav07 has changed a transaction detail in a baahubali with description Splitwise to Splitwise and tag Travel to Food
+30,bargav07 has changed a transaction detail in a baahubali with description Splitwise to Splitwise and tag Travel to Food
+29,bargav07 has changed a transaction detail in a baahubali with description Splitwise to Splitwise and tag Travel to Food
+14,You have changed detail of a transaction of baahubali of description  to Splitwise and tag  to Hospital
+1,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Hospital
+25,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Hospital
+28,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Hospital
+30,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Hospital
+29,bargav07 has changed a transaction detail in a baahubali with description  to Splitwise and tag  to Hospital
+14,You have changed detail of a transaction of baahubali of description  to Baahubali and tag  to Cinema
+1,bargav07 has changed a transaction detail in a baahubali with description  to Baahubali and tag  to Cinema
+25,bargav07 has changed a transaction detail in a baahubali with description  to Baahubali and tag  to Cinema
+28,bargav07 has changed a transaction detail in a baahubali with description  to Baahubali and tag  to Cinema
+30,bargav07 has changed a transaction detail in a baahubali with description  to Baahubali and tag  to Cinema
+29,bargav07 has changed a transaction detail in a baahubali with description  to Baahubali and tag  to Cinema
+14,You added test2 to your's friend's list 
+26,bargav07 added You to his friend's list 
+14,You added ramanathi into Ulfa Batch
+1,bargav07 added you  into Ulfa Batch
+14,You added test1 into Ulfa Batch
+1,bargav07 added test1 into Ulfa Batch
+25,bargav07 added you  into Ulfa Batch
+14,You created Trident
+14,You created Baahubali2
+14,You added ramanathi into Baahubali2
+1,bargav07 added you  into Baahubali2
+14,You added test1 into Baahubali2
+1,bargav07 added test1 into Baahubali2
+25,bargav07 added you  into Baahubali2
+1,Group: Baahubali2 ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+14,Group: Baahubali2 ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+25,Group: Baahubali2 ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+1,Group: Baahubali2 ;  ramanathi payed Rs.200 to this group. bargav07 debted Rs.0 into this group. test1 got settled with this group.
+14,Group: Baahubali2 ;  ramanathi payed Rs.200 to this group. bargav07 debted Rs.0 into this group. test1 got settled with this group.
+25,Group: Baahubali2 ;  ramanathi payed Rs.200 to this group. bargav07 debted Rs.0 into this group. test1 got settled with this group.
+14,You created rambo
+14,You Have Exited from rambo
+1,You added bargav07 into Baahubali2
+25,ramanathi added bargav07 into Baahubali2
+14,ramanathi added you  into Baahubali2
+14,You created The_Trident
+14,You created Sanyal
+14,You added ramanathi into The_Trident
+1,bargav07 added you  into The_Trident
+14,You added test1 into The_Trident
+1,bargav07 added test1 into The_Trident
+25,bargav07 added you  into The_Trident
+1,Group: The_Trident ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+14,Group: The_Trident ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+25,Group: The_Trident ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+1,Group: The_Trident ;  ramanathi got settled with this group. bargav07 debted Rs.0 into this group. test1 payed Rs.200 to this group.
+14,Group: The_Trident ;  ramanathi got settled with this group. bargav07 debted Rs.0 into this group. test1 payed Rs.200 to this group.
+25,Group: The_Trident ;  ramanathi got settled with this group. bargav07 debted Rs.0 into this group. test1 payed Rs.200 to this group.
+14,You added ramanathi into Sanyal
+1,bargav07 added you  into Sanyal
+14,You Have Exited from The_Trident
+14,You created Trident
+14,You created CSEIITB
+14,You Have Exited from CSEIITB
+14,You created CSEIITB
+14,You added ramanathi into CSEIITB
+1,bargav07 added you  into CSEIITB
+14,You added test1 into CSEIITB
+1,bargav07 added test1 into CSEIITB
+25,bargav07 added you  into CSEIITB
+14,You Have Exited from CSEIITB
+1,You added bargav07 into CSEIITB
+25,ramanathi added bargav07 into CSEIITB
+14,ramanathi added you  into CSEIITB
+1,You added test3 into The_Trident
+25,ramanathi added test3 into The_Trident
+27,ramanathi added you  into The_Trident
+1,Group: The_Trident ;  ramanathi payed Rs.200 to this group. test3 got settled with this group. test1 debted Rs.0 into this group.
+27,Group: The_Trident ;  ramanathi payed Rs.200 to this group. test3 got settled with this group. test1 debted Rs.0 into this group.
+25,Group: The_Trident ;  ramanathi payed Rs.200 to this group. test3 got settled with this group. test1 debted Rs.0 into this group.
+1,You added bargav07 into Sanyal
+14,ramanathi added you  into Sanyal
+1,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+14,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+1,You Settled  by receiving 100 .Rs from test1
+25,ramanathi Settled  by receiving 100 .Rs from You
+1,You Settled  by paying 50 .Rs to bargav07
+14,ramanathi Settled  by paying 50 .Rs to You
+1,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+14,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+1,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+14,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+1,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+14,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+1,Group: CSEIITB ;  ramanathi debted Rs.0 into this group. bargav07 payed Rs.400 to this group. test1 got settled with this group.
+14,Group: CSEIITB ;  ramanathi debted Rs.0 into this group. bargav07 payed Rs.400 to this group. test1 got settled with this group.
+25,Group: CSEIITB ;  ramanathi debted Rs.0 into this group. bargav07 payed Rs.400 to this group. test1 got settled with this group.
+1,Group: CSEIITB ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+14,Group: CSEIITB ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+25,Group: CSEIITB ;  ramanathi got settled with this group. bargav07 payed Rs.200 to this group. test1 debted Rs.0 into this group.
+1,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.400 to this group. test1 payed Rs.400 to this group.
+14,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.400 to this group. test1 payed Rs.400 to this group.
+25,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.400 to this group. test1 payed Rs.400 to this group.
+1,You added lays .You lent 50.0
+4,ramanathi added lays. You borrowed 50.0
+1,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+14,Group: Sanyal ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.200 to this group.
+1,Group: CSEIITB ;  ramanathi debted Rs.0 into this group. bargav07 payed Rs.600 to this group. test1 payed Rs.600 to this group.
+14,Group: CSEIITB ;  ramanathi debted Rs.0 into this group. bargav07 payed Rs.600 to this group. test1 payed Rs.600 to this group.
+25,Group: CSEIITB ;  ramanathi debted Rs.0 into this group. bargav07 payed Rs.600 to this group. test1 payed Rs.600 to this group.
+1,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.800 to this group. test1 debted Rs.300 into this group.
+14,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.800 to this group. test1 debted Rs.300 into this group.
+25,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.800 to this group. test1 debted Rs.300 into this group.
+1,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+14,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+25,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+1,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+14,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+25,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+1,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+14,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+25,Group: CSEIITB ;  ramanathi debted Rs.100 into this group. bargav07 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+1,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+27,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+25,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+1,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+27,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+25,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+1,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+27,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+25,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+1,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+27,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.
+25,Group: The_Trident ;  ramanathi debted Rs.100 into this group. test3 payed Rs.1000 to this group. test1 debted Rs.100 into this group.

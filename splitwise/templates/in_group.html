@@ -7,7 +7,13 @@
   .divide{
     float: left;
     text-align: center;
-  width: 12.5%;
+  width: 13%;
+  height: 100%;
+  }
+  .small{
+    float: left;
+    text-align: center;
+  width: 5%;
   height: 100%;
   }
   .row:after {
@@ -17,10 +23,10 @@
 }
 
 </style>
-<h3><a href="{% url 'Settleup'%}">Settleup</a>
-<a href="{% url 'show_balances' pk=new_friend.pk%}">Balance</a>
-<a href=# >Add Transactions</a></h3>
-<h2>{{ new_friend.name }} 
+<h3><a href="{% url 'Settleup' pk=new_friend.pk %}" style="padding-left: 40px;">Settleup</a>
+<a href="{% url 'show_balances' pk=new_friend.pk %}" style="padding-left: 40px;">Balance</a>
+<a href="{% url 'group_trans' pk=new_friend.pk %}"style="padding-left: 40px;">Add Transactions</a></h3>
+<h2 style="padding-left: 50px;">{{ new_friend.name }} 
 </h2>
 <div class="row">
   <div class="divide" style="padding-left: 20px;">
@@ -29,42 +35,41 @@
       {% if group.username == user.username %}
       <a href="{% url 'friends' %}">
       <h3>You
-        <a href=#>
+        <a href="{% url 'exit' pk=new_friend.pk %}">
       <button type="button" name="btn btn-default">Exit</button>
       </a></h3>
       </a>
       {% else %}
       <a href="{% url 'friend_detail' pk=group.pk %}">
-      <h3>{{ group.username }}</h3>
+      <h3 style="color: green;">{{ group.username }}</h3>
       </a>
       {% endif %}
       {% endfor %}
   </div>
-  <div class="divide">
-    <h3>Transaction Amount</h3>
+  <div>
+    <div class="col-md-7">
+      {% for u,i in detail %}
+      <a href="{% url 'edit_group_trans' pk=u %}"><h3>Edit</h3></a>
+      <div style="background-color: #BDC3C7;padding-top: 3px;padding-bottom: 3px;padding-left: 20px;text-align: center;color: #800000;">
+      {% for j in i %}
+
+      <h3>{{ j }}</h3>
+        
+      {% endfor %}
     </div>
-    <div class="divide">
-      <h3>ulfa </h3>
-      </div>
-      <div class="divide">
-        <h3>ulfa </h3>
-        </div>
-        <div class="divide">
-          <h3>ulfa </h3>
-          </div>
-          <div class="divide">
-                <h3 style="color: grey">Settled up</h3>
-            </div>
-          <div class="divide">
-            <center>
-          <h3>Edit</h3>            
-            </center>
-          </div>
+      <br>
+      {% endfor %}
+
+    
+  
+  </div>
+  </div>
+
   <div class="divide" style="object-position: right;">
     <center>
     <h2>Your Friends</h2>
     {% for friend in friends %}
-      <a href="#">
+      <a href="{% url 'friend_detail' pk=friend.pk %}">
         {% if not friend in groups %}
         <h3>{{ friend.username }}
       <a href="{% url 'add_friends_to_group_new' pk1=new_friend.pk pk2=friend.pk %}">

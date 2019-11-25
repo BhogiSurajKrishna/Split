@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title %}New Transaction in Group{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Add New Transaction in Group</h2>
+  
+  <form class="form-horizontal form_middle" enctype='multipart/form-data' method="POST">
+    <div class="col-md-9">
+    {% csrf_token %}
+    {{ form.errors }}
+    {{ form.non_field_errors }}
+    <div >
+          <h3>
+               <input type = "textarea" style=" width:50%;"
+                  placeholder = "Description" name = "Description" required>
+           </h3>
+         </div>
+       
+         <div >
+            <h3>
+               
+                <input list="tags" style=" width:50%;"
+                  placeholder = "Tag" name = "Tag" required>
+                  <datalist id="tags">
+                    <option value="Food">
+                    <option value="Travel">
+                    <option value="Party">
+                    <option value="Canteen">
+                    <option value="Debt">
+                    <option value="Medical Expences">
+                    <option value="Gift">
+                  </datalist>
+          </h3>
+         </div>
+         <br>
+         <div >
+          <h3>
+            Amount paid by each of the users<br>
+          </h3>
+          <h4>
+          Format: username1 : amountpaid1, username2 : amountpaid2<br>
+          Example: If there are only 3 users in group<br>
+          Batman : 1000, Joker : 200, DeadPool : 0<br>
+          </h4>
+          <h3>
+               <input type = "textarea" style=" width:50%;"
+                  placeholder = "Amount paid by each of the users" name = "amt_paid_by_him" required>
+           </h3>
+          
+         </div>
+         <br>
+         <h3>
+         <input type="checkbox" name = "split" checked id="check"> Split Equally</br>
+       </h3>
+    <div >
+      <h3>
+            Expenditure for each friend
+          </h3>
+          <h4>
+          Format: username1 : expenses1, username2 : expenses2<br>
+          Example: If there are only 3 users in group<br>
+          Batman : 200, Joker : 0, DeadPool : 800<br>
+          </h4>
+          <h3>
+               <input type = "textarea" style=" width:50%;"
+                  placeholder = "Expenditure for each friend" name = "amt_for_him" required id="expen">
+           </h3>
+          
+         </div>
+
+         <br><br>
+
+         <script type="text/javascript">
+         function my_toggle_func() { 
+          if (document.getElementById("check").checked) {
+                document.getElementById("expen").required = false;
+              }
+          
+          else{
+            document.getElementById("expen").required = true;
+          }
+        }
+// document.getElementById("percentages").onclick = my_toggle_func;
+// document.getElementById("shares").onclick = my_toggle_func;
+
+
+// document.getElementById("my_checkbox").onclick = my_toggle_func;
+</script>
+         <div >
+            
+               <button style = "border:0px; background-color:#57CA15 ;
+                  height:35px; width:50%;" type = "submit"
+                  value = "Login" id="submit" onclick="my_toggle_func()">
+                  <strong>Submit</strong>
+               </button>
+           
+         </div>
+          </div>
+          <div class="col-md-3">
+
+         <h3>
+          Users in {{ group.name }}
+          <br><br>
+         {% for friend in users %}
+          {{ friend.username }}
+          <br>
+          <br>
+         {% endfor %}
+       </h3>
+
+      </div>
+  </form>
+</div>
+{% endblock %}

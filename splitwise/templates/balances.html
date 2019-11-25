@@ -46,33 +46,4 @@
   </div>
   </div>
   </div>
-  <div class="container">
-  <div>
-  <div class="col-md-6">
-      <center>
-       <h3> Net Amount </h3>
-      </center>
-     <hr class="mt-0 mb-2">
-  </div>
-  </div>
-  <div>
-  <div class="col-md-6">
-    {% if total > 0 %}
-    <center>
-        <h3 style="color: red"> You owe {{ total }} .Rs to this group</h3>
-      </center>
-    {% elif total < 0 %}
-    <center>
-        <h3 style="color: green"> This group Owes you {{ total }} .Rs </h3>
-      </center>
-    {% elif total == 0 %}
-    <center>
-        <h3 style=> You're Settled </h3>
-      </center>
-    {% endif %}
-     <hr class="mt-0 mb-2">
-
-  </div>
-  </div>
-  </div>
 {% endblock %}

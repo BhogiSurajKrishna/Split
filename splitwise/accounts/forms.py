@@ -1,5 +1,5 @@
 from django import forms
-from accounts.models import profile,add_group,Transactions
+from accounts.models import profile,Add_group,Transactions,Group_Transactions
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm,forms
 
@@ -17,7 +17,7 @@ class SignUpForm(UserCreationForm):
 
 class groupform(forms.ModelForm):
 	class Meta:
-		model = add_group
+		model = Add_group
 		fields = ['GroupName','Description']
 class transform(forms.ModelForm):
 	class Meta:
@@ -27,4 +27,13 @@ class editform(forms.ModelForm):
 	class Meta:
 		model = Transactions
 		fields = ['desc','tag']
+class grouptransform(forms.ModelForm):
+	class Meta:
+		model = Group_Transactions
+		fields = ['Description','Tag','amt_paid_by_him','amt_for_him','split']
+	
+class groupeditform(forms.ModelForm):
+	class Meta:
+		model = Group_Transactions
+		fields = ['Description','Tag']
 

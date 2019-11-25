@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Group Transaction{% endblock %}
+
+{% block content %}
+<div class="container">
+  <center>
+  <h2>Edit Group Transaction Details</h2>
+  </center>
+  <form class="form-horizontal form_middle" enctype='multipart/form-data' method="POST">
+    {% csrf_token %}
+    <!-- {{ form.as_p }}
+    <button value="upload" type="Submit">Submit</button> -->
+<br><br><br>
+         <div >
+          <h3>
+            <center>
+               <input type = "textarea" style=" width:50%;"
+                  placeholder = "Description" name = "Description" required />
+            </center>
+          </h3>
+         </div>
+         <br>
+         <center>
+         <div >
+            <h3>
+               
+                <input list="tags" style=" width:50%;"
+                  placeholder = "Tag" name = "Tag" required>
+                  <datalist id="tags">
+                    <option value="Food">
+                    <option value="Travel">
+                    <option value="Party">
+                    <option value="Canteen">
+                    <option value="Debt">
+                    <option value="Medical Expences">
+                    <option value="Gift">
+                  </datalist>
+          </h3>
+         </div>
+       </center>
+         <br>
+         <div >
+            <center>
+               <button style = "border:0px; background-color:#4285F4;
+                  height:35px; width:50%;" type = "submit"
+                  value = "Login" >
+                  <strong>Submit</strong>
+               </button>
+            </center>
+         </div>
+         </div>
+  </form>
+{% endblock %}
