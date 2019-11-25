@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Transactions{% endblock %}
+
+{% block content %}
+<center>
+  <h2>Balances with your friends in {{ this_group.name }}</h2>
+</center>
+<div class="container">
+  <div>
+  <div class="col-md-6">
+    <center>
+    <h2>Friend</h2>
+    </center>
+     <hr class="mt-0 mb-2">
+  </div>
+  </div>
+  <div>
+  <div class="col-md-6">
+    <center>
+    <h2>Balance Amount</h2>
+    </center>
+     <hr class="mt-0 mb-2">
+  </div>
+  </div>
+  </div>
+  <div class="container">
+  <div>
+  <div class="col-md-6">
+      {% for f in names %}
+      <center>
+       <h3> {{ f }} </h3>
+      </center>
+     <hr class="mt-0 mb-2">
+  {% endfor %}
+  </div>
+  </div>
+  <div>
+  <div class="col-md-6">
+    {% for f in detail %}
+    <center>
+        <h3> {{ f }} </h3>
+      </center>
+     <hr class="mt-0 mb-2">
+  {% endfor %}
+  </div>
+  </div>
+  </div>
+{% endblock %}

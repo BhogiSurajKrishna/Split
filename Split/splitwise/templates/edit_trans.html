@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Transaction{% endblock %}
+
+{% block content %}
+<div class="container">
+  <center>
+  <h2>Edit Transaction Details</h2>
+  </center>
+  <form class="form-horizontal form_middle" enctype='multipart/form-data' method="POST">
+    {% csrf_token %}
+    <!-- {{ form.as_p }}
+    <button value="upload" type="Submit">Submit</button> -->
+<br><br><br>
+         <div >
+            <center>
+               <input type = "textarea" style=" width:30%;"
+                  placeholder = "Description" name = "desc" required />
+            </center>
+         </div>
+         <br>
+         <div >
+            <center>
+               <input type = "textarea" style=" width:30%;"
+                  placeholder = "Tag" name = "tag" required />
+            </center>
+         </div>
+         <br>
+         <div >
+            <center>
+               <button style = "border:0px; background-color:#4285F4;
+                  height:35px; width:30%;" type = "submit"
+                  value = "Login" >
+                  <strong>Submit</strong>
+               </button>
+            </center>
+         </div>
+         </div>
+  </form>
+{% endblock %}

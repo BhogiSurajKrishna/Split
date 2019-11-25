@@ -1,0 +1,66 @@
+1,You Settled Maggi by paying 250 .Rs to ramanathi
+14,ramanathi Settled Maggi by paying 250 .Rs to You
+1,You added Chicken Biryani .You borrowed 500.0
+14,ramanathi added Chicken Biryani. You lent 500.0
+1,You Settled Chicken Biryani by paying 500 .Rs to bargav07
+14,ramanathi Settled Chicken Biryani by paying 500 .Rs to You
+1,You Settled bah by receiving 500 .Rs from bargav07
+14,ramanathi Settled bah by receiving 500 .Rs from You
+14,You have changed a transaction detail with description Chicken to Foodand tag Dum Matka to Alpha
+1,bargav07has changed a transaction detail with description Chicken to Foodand tag Dum Matka to Alpha
+1,You have changed detail of a transaction with ramanathi of description nkwlrgnrkl to Donkey Head and tag mlenwrj to Dum Matka
+14,ramanathi has changed a transaction detail with description nkwlrgnrkl to Donkey Head and tag mlenwrj to Dum Matka
+25,You added bargav to your's friend's list 
+4,test1 added You to his friend's list 
+1,You added Chicken .You borrowed 1000
+14,ramanathi added Chicken. You lent 1000
+1,You added Chicken .You lent 500.0
+15,ramanathi added Chicken. You borrowed 500.0
+1,You added Chicken .You borrowed 150.0
+27,ramanathi added Chicken. You lent 150.0
+1,You created dafaq
+1,You added bargav07intodafaq
+14,You added test1intodafaq
+25,bargav07 added you into dafaq
+25,You added test2 to your's friend's list 
+26,test1 added You to his friend's list 
+25,You added test2into dafaq
+26,test1 added you into dafaq
+25,You added test3 into dafaq
+27,test1 added you into dafaq
+1,You added telu into niadeqgjiow
+23,ramanathi added you into niadeqgjiow
+1,You added test into niadeqgjiow
+24,ramanathi added you into niadeqgjiow
+1,You created cse
+1,You added bargav07 into cse
+14,ramanathi added you into cse
+1,You added bhogi into cse
+15,ramanathi added you into cse
+14,You added ramanathi into MyGroup
+1,bargav07 added you into MyGroup
+1,You created rambo
+1,You created The_Trident
+1,You created The_Trident
+1,You created The_Trident
+1,You created The_Trident
+1,You added test1 into The_Trident
+25,ramanathi added you into The_Trident
+1,You created baahubali
+1,You created baahubali
+1,You created baahubali
+1,You created The_Trident
+1,You added bargav07 into The_Trident
+14,ramanathi added you into The_Trident
+1,You added test1 into The_Trident
+25,ramanathi added you into The_Trident
+1,You created baahubali
+1,You added bargav07 into baahubali
+14,ramanathi added you into baahubali
+14,You added test1 into baahubali
+25,bargav07 added you into baahubali
+14,You created baahubali
+14,You added ramanathi into baahubali
+1,bargav07 added you into baahubali
+14,You added test1 into baahubali
+25,bargav07 added you into baahubali

@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+
+{% block title %}New Transaction{% endblock %}
+
+{% block content %}
+<style type="text/css">
+  #textareas{
+    display: none;
+  }
+ #checks{
+    display: none;
+  }
+
+</style>
+<div class="container">
+ 
+  <h2>Add New Transaction</h2>
+  
+  <form class="form-horizontal form_middle" enctype='multipart/form-data' method="POST">
+    {% csrf_token %}
+    {{ form.errors }}
+    {{ form.non_field_errors }}
+    <!-- {{ form.as_p }}
+    <button value="upload" type="Submit">Submit</button> -->
+<br>
+    <div >
+           <h3>
+               <input type = "number" min="0" style=" width:30%;"
+                  placeholder = "Amount" name = "amount" required id="amt" value=100>
+           </h3>
+         </div>
+  
+         <div >
+              <h3>            
+               <input type = "radio" name = "type" value="a" checked onclick="my_toggle_func()"> Paid by you and split equally<br></h3>
+               <h3>
+               <input type = "radio"  name = "type" value="b" onclick="my_toggle_func()"> Paid by your friend and split equally<br>
+             </h3>
+             <h3>
+               <input type = "radio"  name = "type" value="c" onclick="my_toggle_func()"> You owe to him completely<br>
+             </h3>
+             <h3>
+               <input type = "radio"  name = "type" value="d" onclick="my_toggle_func()"> He owe to you completely<br>
+             </h3>
+             <div >
+             <h3>
+               <input type = "radio"  name = "type" value="e" id="percentages" onclick="my_toggle_func()"> Split by Percentages<br>
+             </h3>
+           </div>
+           <div >
+             <h3>
+               <input type = "radio"  name = "type" value="f" id="shares" onclick="my_toggle_func()"> Split by shares<br>
+             </h3>
+             </div>
+             <div id="checks">
+             <h3>
+               <input type = "checkbox"  name = "split" id="paid_by_you" value="0" onclick="my_toggle_func()" checked >Paid by You<br>
+             </h3>
+             <h3>
+               <input type = "checkbox"  name = "split" id="paid_by_him" value="1" onclick="my_toggle_func()">Paid by Your Friend<br>
+             </h3>
+           </div>
+            
+             <div id="textareas">
+             <h3>
+              Expense for you<br>
+               <input type = "number" min="0" name = "amount_you" id="you"  value=50><br>
+             </h3>
+             <h3>
+              Expense for your friend<br>
+               <input type = "number" min="0" name = "amount_friend" id="friend"  value=50><br>
+             </h3>
+           </div>
+
+         </div>
+       <script type="text/javascript">
+         function my_toggle_func() { 
+          if (document.getElementById("percentages").checked) {
+                document.getElementById("textareas").style.display = 'block';
+                // document.getElementById("friend").style.display = 'block';
+                document.getElementById("checks").style.display = 'block';
+                document.getElementById("you").required = true;
+                document.getElementById("friend").required = true;
+                var x = parseInt(document.getElementById("you").value);
+                var y = parseInt(document.getElementById("friend").value);
+                var z = parseInt(document.getElementById("amt").value);
+                // window.alert(x+y);
+                if(x+y!=100){
+                  window.alert("Percentages doesn't sum to 100!!");
+                }
+                if(document.getElementById("paid_by_you").checked && document.getElementById("paid_by_him").checked){
+                  window.alert("Don't check all checkboxes");
+                }
+                if(!document.getElementById("paid_by_you").checked && !document.getElementById("paid_by_him").checked){
+                  window.alert("Please Check any of the checkboxes");
+                }
+              }
+          else if (document.getElementById("shares").checked){
+                document.getElementById("textareas").style.display = 'block';
+                // document.getElementById("friend").style.display = 'block';
+                document.getElementById("checks").style.display = 'block';
+                document.getElementById("you").required = true;
+                document.getElementById("friend").required = true;
+                var x = parseInt(document.getElementById("you").value);
+                var y = parseInt(document.getElementById("friend").value);
+                var z = parseInt(document.getElementById("amt").value);
+                var a = document.getElementById("you").value;
+                var b = document.getElementById("friend").value;
+                var c = document.getElementById("amt").value;
+                if(z==100 && x==50 && y==50 ){}
+                else if(z!=100 && x== 50 && y==50){
+                  // window.alert("Summation of your amounts doesn't cope with total amount :(");
+                }
+                else if(x+y!=z){
+                  window.alert("Summation of your amounts doesn't cope with total amount :(");
+                }
+                if(document.getElementById("paid_by_you").checked && document.getElementById("paid_by_him").checked){
+                  window.alert("Don't check all checkboxes");
+                }
+                if(!document.getElementById("paid_by_you").checked && !document.getElementById("paid_by_him").checked){
+                  window.alert("Please Check any one of the checkboxes");
+                }
+              }
+          // else if(this.id == "submit"){
+          //   window.alert("Clicked Submit");
+          // }
+          else{
+            document.getElementById("textareas").style.display = 'none';
+            // document.getElementById("friend").style.display = 'none';
+             document.getElementById("checks").style.display = 'none';
+             document.getElementById("you").required = false;
+                document.getElementById("friend").required = false;
+          }
+        }
+// document.getElementById("percentages").onclick = my_toggle_func;
+// document.getElementById("shares").onclick = my_toggle_func;
+
+
+// document.getElementById("my_checkbox").onclick = my_toggle_func;
+</script>
+         <div >
+          <h3>
+               <input type = "textarea" style=" width:30%;"
+                  placeholder = "Description" name = "desc" required>
+           </h3>
+         </div>
+       
+         <div >
+            <h3>
+               
+                <input list="tags" style=" width:30%;"
+                  placeholder = "Tag" name = "tag" required>
+                  <datalist id="tags">
+                    <option value="Food">
+                    <option value="Travel">
+                    <option value="Party">
+                    <option value="Canteen">
+                    <option value="Debt">
+                    <option value="Medical Expences">
+                    <option value="Gift">
+                  </datalist>
+          </h3>
+         </div>
+         
+         <div >
+            
+               <button style = "border:0px; background-color:#4285F4;
+                  height:35px; width:30%;" type = "submit"
+                  value = "Login" onclick="my_toggle_func()" id="submit">
+                  <strong>Submit</strong>
+               </button>
+           
+         </div>
+         </div>
+  {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+  </form>
+
+{% endblock %}

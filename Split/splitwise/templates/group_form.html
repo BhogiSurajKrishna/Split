@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Group{% endblock %}
+
+{% block content %}
+  <h2>Create Group</h2>
+  <form class="form-horizontal form_middle" enctype='multipart/form-data' method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button value="upload" type="Submit">Submit</button>
+  </form>
+{% endblock %}

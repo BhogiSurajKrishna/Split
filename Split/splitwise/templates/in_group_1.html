@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Groups{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="col-md-8">
+      <h2>{{ new_friend.name }}</h2>
+      <!-- <h3>{{ groups.u }}</h3> -->
+      {% for group in groups %}
+      <a href="#">
+      <h3>{{ group.username }}</h3>
+      </a>
+      {% endfor %}
+  </div>
+  <div class="col-md-4">
+    <h2>Your Friends</h2>
+    {% for friend in friends %}
+      <a href="#">
+        {% if not friend in groups %}
+        <h3>{{ friend.username }}
+          {{ friend.pk }}
+      <a href="{% url 'add_friends_to_group_new_1' pk1=groups.pk pk2=friend.pk %}">
+      <button type="button" name="btn btn-default">ADD</button>
+      </a>
+      </h3>
+      {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
+
+<!-- {% for user in users %}
+  <a href="#">
+      {% if not user in friends %}
+      <h3>{{ user.username }}
+        {{ user.pk }}
+        <a href="{% url 'add_friends' pk=user.pk %}">
+        <button type="button" name="btn btn-default">ADD</button>
+        </a>
+      {% endif %}
+
+    </h3>
+  </a>
+{% endfor %} -->

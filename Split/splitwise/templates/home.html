@@ -1,0 +1,71 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Home{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<body>
+  <main>
+
+    {% block content %}
+    {% if user.is_authenticated %}
+    <nav class="navbar navbar-inverse" style="color:#399C53;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{% url 'home' %}">SplitWise</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'friends' %}">Friends</a></li>
+          <li><a href="{% url 'create_group' %}">Groups</a></li>
+          <li><a href="{% url 'Activity' %}">Activity</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'info' %}"><span class="glyphicon glyphicon-user"></span>{{ user.username }}</a></li>
+          <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <br><br><br>
+      <div class="col-md-6">
+      {% if user.profile.image == "" %}
+      <img src="/media/images/profile.png" width="300" enctype="multipart/form-data" class="rounded-circle">
+      {% else %}
+      <img src="/media/{{ user.profile.image }}" width="300" height="300" enctype="multipart/form-data" class="rounded-circle">
+      {% endif %}
+      <br><br><br>
+      <h2 style="color:#900C3F;"> Username: {{ user.username }}</h2>
+      <h2 style="color:#900C3F;"> Email: {{ user.email }}</h2>
+      <h2 style="color:#900C3F;"> UserID: {{ user.profile.userid }}</h2>
+      <!-- <h2> Userid: {{ user.userid }}</h2> -->
+    </div>
+    <div class="col-md-6">
+      <br><br><br><br>
+      <h1 style="color:#573805;">Hello {{ user.username }}!</h1>
+    </div>
+    </div>
+      <!-- <p><a href="{% url 'logout' %}">logout</a></p> -->
+      <!-- <p><a href="{% url 'password_reset' %}">reset password</a></p> -->
+      <!-- <p><a href="{% url 'info' %}">update Personal information</a></p> -->
+
+      <!-- {% if user.profile.image == "" %}
+      <img src="/media/images/profile.png" width="240" enctype="multipart/form-data">
+      {% else %}
+      <img src="/media/{{ user.profile.image }}" width="240" enctype="multipart/form-data">
+      {% endif %} -->
+    {% else %}
+    <div class="container">
+      <br><br><br><br><br><br>
+      <h1 class="text-left">You are not Logged in</h1>
+      <h2 class="text-left">Please <a href="{% url 'login' %}">Login</a></h2>
+      <h2 class="text-left">If you haven't registered the please <a href="{% url 'signup' %}">Signup</a></h2>
+    </div>
+    {% endif %}
+    {% endblock %}
+  </main>
+</body>
+</html>

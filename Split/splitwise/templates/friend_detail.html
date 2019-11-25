@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Transactions{% endblock %}
+
+{% block content %}
+<a href="{% url 'new_trans' pk=new_friend.pk %}" >
+<button type="button" class="btn btn-default" align="right" style="text-color:blue">Add Transactions</button>
+</a>
+<center>
+<h1>Transactions with {{ new_friend.username }}</h1>
+</center>
+<div class="container">
+  <div>
+  <div class="col-md-1">
+    <center>
+    <h3>Transaction Amount</h3>
+    </center>
+     <hr class="mt-0 mb-2">
+  </div>
+  <div class="col-md-4">
+      <center>
+      <h3>Description</h3>
+    </center>
+      <br>
+       <hr class="mt-0 mb-2">
+  </div>
+  <div class="col-md-1">
+        <center>
+        <h3>Payable Amount</h3> 
+        </center>
+         <hr class="mt-0 mb-2">
+  </div>
+  <div class="col-md-2">
+          <center>
+          <h3>Tag</h3>            
+          </center>
+         <br>
+           <hr class="mt-0 mb-2">
+  </div>
+  <div class="col-md-2">
+            <center>
+             <h3>Status</h3>              
+            </center>
+             <br>
+              <hr class="mt-0 mb-2">
+  </div>
+  <div class="col-md-1">
+    <center>
+    <h3>Edit</h3>
+    </center>
+    <br>
+    <hr class="mt-0 mb-2">
+  </div>
+  </div>
+  </div>
+  </div>
+{% for tran in trans %}
+{% if tran.current_user == new_friend and tran.current_user_pk == current_user_pk %}
+<div class="container">
+  <div>
+    <center>
+  <div class="col-md-1">
+    <h3>{{ tran.amount }} </h3>
+     <hr class="mt-0 mb-2">
+    </div>
+    <div class="col-md-4">
+      <h3>{{ tran.desc }} </h3>
+       <hr class="mt-0 mb-2">
+      </div>
+      <div class="col-md-1">
+        <h3>{{tran.payable}} </h3>
+         <hr class="mt-0 mb-2">
+        </div>
+        <div class="col-md-2">
+          <h3>{{ tran.tag }} </h3>
+           <hr class="mt-0 mb-2">
+          </div>
+          <div class="col-md-2">
+            
+            {% if tran.status == 0 %}
+             <a href="{% url 'settle' pk1=tran.pk pk2=tran.pair pk=new_friend.pk %}"><h3>settle</h3></a>
+              <hr class="mt-0 mb-2">
+            {% else %}
+                <h3 style="color: grey">Settled up</h3>
+            {% endif %}
+            </div>
+          <div class="col-md-1">
+            <center>
+          <a href="{% url 'edit_trans' pk=tran.pk pk1=new_friend.pk %}"><h3>Edit</h3></a>              
+            </center>
+          <hr class="mt-0 mb-1">
+          </div>  
+          </div>
+        </center>
+   {% endif %}
+  </div>
+
+   {% endfor %}
+{% endblock %}

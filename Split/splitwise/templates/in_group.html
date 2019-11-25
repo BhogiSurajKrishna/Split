@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}Groups{% endblock %}
+
+{% block content %}
+<style type="text/css">
+  .divide{
+    float: left;
+    text-align: center;
+  width: 12.5%;
+  height: 100%;
+  }
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+<h3><a href="{% url 'Settleup'%}">Settleup</a>
+<a href="{% url 'show_balances' pk=new_friend.pk %}">Balance</a>
+<a href="{% url 'group_trans' pk=new_friend.pk %}" >Add Transactions</a></h3>
+<h2>{{ new_friend.name }} 
+</h2>
+<div class="row">
+  <div class="divide" style="padding-left: 20px;">
+      <!-- <h3>{{ groups.u }}</h3> -->
+      {% for group in groups %}
+      {% if group.username == user.username %}
+      <a href="{% url 'friends' %}">
+      <h3>You
+        <a href=#>
+      <button type="button" name="btn btn-default">Exit</button>
+      </a></h3>
+      </a>
+      {% else %}
+      <a href="{% url 'friend_detail' pk=group.pk %}">
+      <h3 style="color: green;">{{ group.username }}</h3>
+      </a>
+      {% endif %}
+      {% endfor %}
+  </div>
+  <div>
+    <div class="col-md-7">
+      {% for i in detail %}
+      <div style="background-color: grey;padding-top: 3px;padding-bottom: 3px;padding-left: 20px;text-align: center;color: #800000;">
+      {% for j in i %}
+      <h3>{{ j }}</h3>
+        
+      {% endfor %}
+    </div>
+      <br>
+      {% endfor %}
+
+    
+  
+  </div>
+  </div>
+  <div class="divide"><center><h3>Edit</h3></center></div>
+  <div class="divide" style="object-position: right;">
+    <center>
+    <h2>Your Friends</h2>
+    {% for friend in friends %}
+      <a href="{% url 'friend_detail' pk=friend.pk %}">
+        {% if not friend in groups %}
+        <h3>{{ friend.username }}
+      <a href="{% url 'add_friends_to_group_new' pk1=new_friend.pk pk2=friend.pk %}">
+      <button type="button" name="btn btn-default">+</button>
+      </a>
+      </h3>
+      {% endif %}
+      </a>
+    {% endfor %}
+    </center>
+  </div>
+</div>
+
+{% endblock %}
+
+<!-- {% for user in users %}
+  <a href="#">
+      {% if not user in friends %}
+      <h3>{{ user.username }}
+        {{ user.pk }}
+        <a href="{% url 'add_friends' pk=user.pk %}">
+        <button type="button" name="btn btn-default">ADD</button>
+        </a>
+      {% endif %}
+
+    </h3>
+  </a>
+{% endfor %} -->
