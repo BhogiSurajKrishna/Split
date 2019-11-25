@@ -20,6 +20,13 @@
       </form>
     </li>
   </ul>
+  <h3>
+    {% for message in messages %}
+    <div class="alert alert-success">
+      {{ message }}
+    </div>
+    {% endfor %}
+  </h3>
 </div>
     {% endblock %}
   </main>
