@@ -11,6 +11,7 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from accounts.models import Friend,Transactions,Add_group,Pair,Group_Transactions
+from django.contrib import messages
 import os
 import sys
 import fileinput
@@ -46,6 +47,7 @@ def SignUp(request):
 			login(request, user)
 			return redirect('/')
 		else:
+			messages.error(request,"User name or password is not correct")			
 			form = SignUpForm()
 			return render(request, 'signup.html', {'form': form})
 	else:
